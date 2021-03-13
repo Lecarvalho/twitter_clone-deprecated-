@@ -7,7 +7,7 @@ class AppBarWidget extends AppBar {
   }) : super(
     title: title,
     actions: action != null ? [action] : null,
-    elevation: .33,
+    elevation: .80,
     brightness: Brightness.light,
     centerTitle: true,
   );
