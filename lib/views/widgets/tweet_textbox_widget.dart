@@ -1,34 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:twitter_clone/views/resources/styles.dart';
 
-class TextboxWidget extends StatelessWidget {
-  final TextEditingController controller;
+class TweetTextboxWidget extends StatelessWidget {
   final String hintText;
-  final String? label;
-  final int? maxLength;
-  final bool isMultiline;
-
-  TextboxWidget({
+  final TextEditingController controller;
+  final int maxLength;
+  TweetTextboxWidget({
     required this.controller,
     required this.hintText,
-    this.label,
-    this.maxLength,
-    this.isMultiline = false
+    required this.maxLength,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      controller: controller,
+      maxLines: 10,
       minLines: 1,
-      maxLines: isMultiline ? 3 : 1,
+      controller: controller,
+      style: Styles.h6,
       inputFormatters: [
         LengthLimitingTextInputFormatter(maxLength)
       ],
-      maxLength: maxLength,
       decoration: InputDecoration(
-        labelText: label,
         hintText: hintText,
+        border: InputBorder.none,
       ),
     );
   }

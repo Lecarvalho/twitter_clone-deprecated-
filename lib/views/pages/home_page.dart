@@ -4,6 +4,7 @@ import 'package:twitter_clone/views/resources/project_icons.dart';
 import 'package:twitter_clone/views/resources/project_logos.dart';
 import 'package:twitter_clone/views/widgets/appbar_widget.dart';
 import 'package:twitter_clone/views/widgets/bottom_navigation_bar_widget.dart';
+import 'package:twitter_clone/views/widgets/tweet_textbox_widget.dart';
 import 'package:twitter_clone/views/widgets/outlined_button_widget.dart';
 import 'package:twitter_clone/views/widgets/textbox_widget.dart';
 
@@ -34,11 +35,11 @@ class _HomePageState extends State<HomePage> {
   void didChangeDependencies() {
     _pageSimulation = <Widget>{
       Container(
-        width: 200,
-        child: TextboxWidget(
+        width: 300,
+        child: TweetTextboxWidget(
           controller: _textController,
-          hintText: "Please inform your name",
-          label: "Name",
+          hintText: "Single or multiline textbox widget...",
+          maxLength: 100,
         ),
       ),
       SearchPage(),
