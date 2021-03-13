@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/views/resources/project_colors.dart';
 
+import 'config/di.dart';
 import 'views/resources/styles.dart';
 import 'views/routes.dart';
 
 void main() {
+
   runApp(MyApp());
 }
 
