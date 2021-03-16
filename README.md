@@ -1,10 +1,15 @@
-# twitter_clone
+[![CI](https://github.com/Lecarvalho/twitter_clone/actions/workflows/main.yml/badge.svg)](https://github.com/Lecarvalho/twitter_clone/actions/workflows/main.yml)
 
-A new Flutter project.
+# Twitter Clone made with Flutter
+
+- null-safety
+- MVC
+- setState - State Management (ephemeral state approach)
+- Provider - Dependency Injections
+- Firestore Database
+- Firebase Auth (Google / Email - password)
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
