@@ -4,6 +4,7 @@ class ProjectIcons {
   ProjectIcons._();
 
   static const double widthHeightIcon = 25;
+  static const double widthHeightSmallIcon = 15;
 
   static Image get bell => Image.asset(
         "assets/icons/bell.png",
@@ -22,8 +23,6 @@ class ProjectIcons {
         height: widthHeightIcon,
       );
 
-  static Image get heart => Image.asset("assets/icons/heart.png");
-  static Image get heartSolid => Image.asset("assets/icons/heart-solid.png");
   static Image get heartSolidLike =>
       Image.asset("assets/icons/heart-solid-like.png");
 
@@ -61,8 +60,6 @@ class ProjectIcons {
         height: widthHeightIcon,
       );
 
-  static Image get retweet => Image.asset("assets/icons/retweet.png");
-
   static Image get searchSolid => Image.asset(
         "assets/icons/search-solid.png",
         width: widthHeightIcon,
@@ -72,5 +69,34 @@ class ProjectIcons {
         "assets/icons/search.png",
         width: widthHeightIcon,
         height: widthHeightIcon,
+      );
+
+  static Image get comment => Image.asset(
+        "assets/icons/comment.png",
+        width: widthHeightSmallIcon,
+        height: widthHeightSmallIcon,
+      );
+
+  static Image get heart => Image.asset(
+        "assets/icons/heart.png",
+        width: widthHeightSmallIcon,
+        height: widthHeightSmallIcon,
+      );
+  static Image get heartSolid => Image.asset(
+        "assets/icons/heart-solid.png",
+        width: widthHeightSmallIcon,
+        height: widthHeightSmallIcon,
+      );
+
+  static Image get retweet => Image.asset(
+        "assets/icons/retweet.png",
+        width: widthHeightSmallIcon,
+        height: widthHeightSmallIcon,
+      );
+
+  static Image get retweetSolid => Image.asset(
+        "assets/icons/retweet-solid.png",
+        width: widthHeightSmallIcon,
+        height: widthHeightSmallIcon,
       );
 }
