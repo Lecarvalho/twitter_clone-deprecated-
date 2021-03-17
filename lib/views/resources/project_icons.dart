@@ -71,19 +71,19 @@ class ProjectIcons {
         height: widthHeightIcon,
       );
 
-  static Image get comment => Image.asset(
-        "assets/icons/comment.png",
+  static Image get reply => Image.asset(
+        "assets/icons/reply.png",
         width: widthHeightSmallIcon,
         height: widthHeightSmallIcon,
       );
 
-  static Image get heart => Image.asset(
-        "assets/icons/heart.png",
+  static Image get like => Image.asset(
+        "assets/icons/like.png",
         width: widthHeightSmallIcon,
         height: widthHeightSmallIcon,
       );
-  static Image get heartSolid => Image.asset(
-        "assets/icons/heart-solid.png",
+  static Image get likeSolid => Image.asset(
+        "assets/icons/like-solid.png",
         width: widthHeightSmallIcon,
         height: widthHeightSmallIcon,
       );

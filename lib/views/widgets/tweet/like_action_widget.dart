@@ -7,7 +7,7 @@ class LikeActionWidget extends TweetActionWidget {
 
   LikeActionWidget({required this.likeCount})
       : super(
-          icon: ProjectIcons.heart,
+          icon: ProjectIcons.like,
           actionCount: likeCount,
         );
 }

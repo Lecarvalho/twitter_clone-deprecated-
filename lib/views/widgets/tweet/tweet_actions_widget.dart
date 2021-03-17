@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'comment_action_widget.dart';
+import 'reply_action_widget.dart';
 import 'like_action_widget.dart';
 import 'retweet_action_widget.dart';
 
 class TweetActionsWidget extends StatelessWidget {
-  final int commentCount;
+  final int replyCount;
   final int retweetCount;
   final int likeCount;
 
   TweetActionsWidget({
-    required this.commentCount,
+    required this.replyCount,
     required this.retweetCount,
     required this.likeCount,
   });
@@ -21,7 +21,7 @@ class TweetActionsWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
       children: [
-        CommentActionWidget(commentCount: commentCount),
+        ReplyActionWidget(replyCount: replyCount),
         SizedBox(width: 30),
         RetweetActionWidget(retweetCount: retweetCount),
         SizedBox(width: 30),

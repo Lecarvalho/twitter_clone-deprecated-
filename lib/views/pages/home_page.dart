@@ -4,9 +4,6 @@ import 'package:twitter_clone/views/resources/project_icons.dart';
 import 'package:twitter_clone/views/resources/project_logos.dart';
 import 'package:twitter_clone/views/widgets/appbar_widget.dart';
 import 'package:twitter_clone/views/widgets/bottom_navigation_bar_widget.dart';
-import 'package:twitter_clone/views/widgets/tweet/comment_action_widget.dart';
-import 'package:twitter_clone/views/widgets/tweet/like_action_widget.dart';
-import 'package:twitter_clone/views/widgets/tweet/retweet_action_widget.dart';
 import 'package:twitter_clone/views/widgets/tweet/tweet_actions_widget.dart';
 import 'notifications_page.dart';
 import 'profile_page.dart';
@@ -33,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   void didChangeDependencies() {
     _pageSimulation = <Widget>{
       TweetActionsWidget(
-        commentCount: 10,
+        replyCount: 10,
         likeCount: 15,
         retweetCount: 159,
       ),
