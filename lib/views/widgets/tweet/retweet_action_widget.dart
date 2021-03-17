@@ -1,8 +1,8 @@
 import 'package:twitter_clone/views/resources/project_icons.dart';
 
-import 'tweet_action_widget.dart';
+import 'base_tweet_action_widget.dart';
 
-class RetweetActionWidget extends TweetActionWidget {
+class RetweetActionWidget extends BaseTweetActionWidget {
   final int retweetCount;
   RetweetActionWidget({required this.retweetCount})
       : super(

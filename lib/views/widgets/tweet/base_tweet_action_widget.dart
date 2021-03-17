@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/views/resources/styles.dart';
 
-class TweetActionWidget extends StatelessWidget {
+abstract class BaseTweetActionWidget extends StatelessWidget {
   final int actionCount;
   final Widget icon;
 
-  TweetActionWidget({
+  BaseTweetActionWidget({
     required this.actionCount,
     required this.icon,
   });
