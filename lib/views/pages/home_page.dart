@@ -33,6 +33,15 @@ class _HomePageState extends State<HomePage> {
         replyCount: 10,
         likeCount: 15,
         retweetCount: 159,
+        onLike: () {
+          print("you like it!");
+        }, 
+        onReply: () { 
+          print("you want to reply it");
+        },
+        onRetweet: (){
+          print("you want to retweet");
+        },
       ),
       SearchPage(),
       NotificationsPage(),
