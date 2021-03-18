@@ -5,6 +5,7 @@ import 'package:twitter_clone/views/resources/project_logos.dart';
 import 'package:twitter_clone/views/widgets/appbar_widget.dart';
 import 'package:twitter_clone/views/widgets/bottom_navigation_bar_widget.dart';
 import 'package:twitter_clone/views/widgets/tweet/tweet_actions_widget.dart';
+import '../routes.dart';
 import 'notifications_page.dart';
 import 'profile_page.dart';
 
@@ -23,6 +24,18 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void _onRetweet() {
+    print("you want to retweet");
+  }
+
+  void _onReply() {
+    Navigator.of(context).pushNamed(Routes.reply);
+  }
+
+  void _onLike() {
+    print("you like it!");
+  }
+
   Set<Widget>? _pageSimulation;
   bool _isReady = false;
 
@@ -33,15 +46,9 @@ class _HomePageState extends State<HomePage> {
         replyCount: 10,
         likeCount: 15,
         retweetCount: 159,
-        onLike: () {
-          print("you like it!");
-        }, 
-        onReply: () { 
-          print("you want to reply it");
-        },
-        onRetweet: (){
-          print("you want to retweet");
-        },
+        onLike: _onLike,
+        onReply: _onReply,
+        onRetweet: _onRetweet,
       ),
       SearchPage(),
       NotificationsPage(),
