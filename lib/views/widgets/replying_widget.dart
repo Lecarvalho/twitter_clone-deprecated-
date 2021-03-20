@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/config/app_params.dart';
 import 'package:twitter_clone/views/resources/styles.dart';
-
-import 'profile_picture_widget.dart';
-import 'tweet_textbox_widget.dart';
+import 'package:twitter_clone/views/widgets/write_reply_widget.dart';
 
 class ReplyingWidget extends StatelessWidget {
   final TextEditingController textController;
@@ -37,21 +34,10 @@ class ReplyingWidget extends StatelessWidget {
               ),
             ),
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ProfilePictureWidget(
-                pictureType: PictureType.small,
-                pictureUrl: profilePictureUrl,
-              ),
-              Flexible(
-                child: TweetTextboxWidget(
-                  controller: textController,
-                  hintText: "Tweet your reply",
-                  maxLength: AppParams.tweetMaxLength,
-                ),
-              ),
-            ],
+          WriteTweetWidget(
+            profilePictureUrl: profilePictureUrl,
+            textController: textController,
+            hintText: "Tweet your reply",
           ),
         ],
       ),
