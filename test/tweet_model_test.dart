@@ -1,4 +1,5 @@
 import 'package:test/test.dart';
+import 'package:twitter_clone/models/profile_model.dart';
 import 'package:twitter_clone/models/tweet_model.dart';
 
 void main() {
@@ -6,7 +7,14 @@ void main() {
     test("1 day before", () {
       var aDayBefore = DateTime.now().subtract(Duration(days: 1));
 
-      var creationTimeAgo = TweetModel(createdAt: aDayBefore).creationTimeAgo;
+      var creationTimeAgo = TweetModel(
+        content: '',
+        createdAt: aDayBefore,
+        likeCount: 0,
+        replyCount: 0,
+        retweetCount: 0,
+        profile: ProfileModel.empty(),
+      ).creationTimeAgo;
 
       expect(creationTimeAgo, "1d");
     });
@@ -14,7 +22,14 @@ void main() {
     test("5 days before", () {
       var aDayBefore = DateTime.now().subtract(Duration(days: 5));
 
-      var creationTimeAgo = TweetModel(createdAt: aDayBefore).creationTimeAgo;
+      var creationTimeAgo = TweetModel(
+        content: '',
+        createdAt: aDayBefore,
+        likeCount: 0,
+        replyCount: 0,
+        retweetCount: 0,
+        profile: ProfileModel.empty(),
+      ).creationTimeAgo;
 
       expect(creationTimeAgo, "5d");
     });
@@ -22,7 +37,14 @@ void main() {
     test("1 hour before", () {
       var aDayBefore = DateTime.now().subtract(Duration(hours: 1));
 
-      var creationTimeAgo = TweetModel(createdAt: aDayBefore).creationTimeAgo;
+      var creationTimeAgo = TweetModel(
+        content: '',
+        createdAt: aDayBefore,
+        likeCount: 0,
+        replyCount: 0,
+        retweetCount: 0,
+        profile: ProfileModel.empty(),
+      ).creationTimeAgo;
 
       expect(creationTimeAgo, "1h");
     });
@@ -30,7 +52,14 @@ void main() {
     test("5 hours before", () {
       var aDayBefore = DateTime.now().subtract(Duration(hours: 5));
 
-      var creationTimeAgo = TweetModel(createdAt: aDayBefore).creationTimeAgo;
+      var creationTimeAgo = TweetModel(
+        content: '',
+        createdAt: aDayBefore,
+        likeCount: 0,
+        replyCount: 0,
+        retweetCount: 0,
+        profile: ProfileModel.empty(),
+      ).creationTimeAgo;
 
       expect(creationTimeAgo, "5h");
     });
@@ -38,7 +67,14 @@ void main() {
     test("1 minute before", () {
       var aDayBefore = DateTime.now().subtract(Duration(minutes: 1));
 
-      var creationTimeAgo = TweetModel(createdAt: aDayBefore).creationTimeAgo;
+      var creationTimeAgo = TweetModel(
+        content: '',
+        createdAt: aDayBefore,
+        likeCount: 0,
+        replyCount: 0,
+        retweetCount: 0,
+        profile: ProfileModel.empty(),
+      ).creationTimeAgo;
 
       expect(creationTimeAgo, "1m");
     });
@@ -46,7 +82,14 @@ void main() {
     test("30 seconds before", () {
       var aDayBefore = DateTime.now().subtract(Duration(seconds: 30));
 
-      var creationTimeAgo = TweetModel(createdAt: aDayBefore).creationTimeAgo;
+      var creationTimeAgo = TweetModel(
+        content: '',
+        createdAt: aDayBefore,
+        likeCount: 0,
+        replyCount: 0,
+        retweetCount: 0,
+        profile: ProfileModel.empty(),
+      ).creationTimeAgo;
 
       expect(creationTimeAgo, "30s");
     });

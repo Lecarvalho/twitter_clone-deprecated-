@@ -8,4 +8,8 @@ class ProfileModel {
     required this.picture,
     required this.nickname,
   });
+
+  factory ProfileModel.empty() {
+    return ProfileModel(name: "", picture: "", nickname: "");
+  }
 }
