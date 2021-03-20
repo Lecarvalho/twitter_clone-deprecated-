@@ -30,41 +30,52 @@ class SingleTweetWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        ProfilePictureWidget(
-          pictureType: PictureType.medium,
-          pictureUrl: "https://i.redd.it/4zr7r2y5zy431.png",
-        ),
-        Flexible(
-          child: Column(
+    return Padding(
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 7, bottom: 10),
+      child: Column(
+        children: [
+          Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              RichText(
-                text: TextSpan(
-                    text: profileName,
-                    style: Styles.subtitle1,
-                    children: [
-                      TextSpan(
-                        text: " $profileNickname · $tweetedTimeAgo",
-                        style: Styles.body2Gray,
-                      )
-                    ]),
+              ProfilePictureWidget(
+                pictureType: PictureType.medium,
+                pictureUrl: "https://i.redd.it/4zr7r2y5zy431.png",
               ),
-              Text(tweetContent),
-              TweetActionsWidget(
-                replyCount: replyCount,
-                retweetCount: retweetCount,
-                likeCount: likeCount,
-                onReply: onReply,
-                onLike: onLike,
-                onRetweet: onRetweet,
-              ),
+              SizedBox(width: 10),
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        text: profileName,
+                        style: Styles.subtitle1,
+                        children: [
+                          TextSpan(
+                            text: " $profileNickname · $tweetedTimeAgo",
+                            style: Styles.body2Gray,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Text(tweetContent),
+                  ],
+                ),
+              )
             ],
           ),
-        )
-      ],
+          SizedBox(height: 15),
+          TweetActionsWidget(
+            replyCount: replyCount,
+            retweetCount: retweetCount,
+            likeCount: likeCount,
+            onReply: onReply,
+            onLike: onLike,
+            onRetweet: onRetweet,
+          ),
+        ],
+      ),
     );
   }
 }
