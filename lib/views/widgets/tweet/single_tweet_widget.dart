@@ -1,28 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_clone/models/tweet_model.dart';
 import 'package:twitter_clone/views/resources/styles.dart';
 import 'package:twitter_clone/views/widgets/profile_picture_widget.dart';
 import 'package:twitter_clone/views/widgets/tweet_actions/tweet_actions_widget.dart';
 
 class SingleTweetWidget extends StatelessWidget {
-  final String profileName;
-  final String profileNickname;
-  final String tweetedTimeAgo;
-  final String tweetContent;
-  final int replyCount;
-  final int likeCount;
-  final int retweetCount;
+  final TweetModel tweet;
   final Function() onReply;
   final Function() onLike;
   final Function() onRetweet;
 
   SingleTweetWidget({
-    required this.profileName,
-    required this.profileNickname,
-    required this.tweetedTimeAgo,
-    required this.tweetContent,
-    required this.replyCount,
-    required this.likeCount,
-    required this.retweetCount,
+    required this.tweet,
     required this.onReply,
     required this.onLike,
     required this.onRetweet,
@@ -48,28 +37,28 @@ class SingleTweetWidget extends StatelessWidget {
                   children: [
                     RichText(
                       text: TextSpan(
-                        text: profileName,
+                        text: tweet.profile.name,
                         style: Styles.subtitle1,
                         children: [
                           TextSpan(
-                            text: " $profileNickname · $tweetedTimeAgo",
+                            text: " ${tweet.profile.nickname} · ${tweet.creationTimeAgo}",
                             style: Styles.body2Gray,
                           ),
                         ],
                       ),
                     ),
                     SizedBox(height: 5),
-                    Text(tweetContent),
+                    Text(tweet.content),
                   ],
                 ),
               )
             ],
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 10),
           TweetActionsWidget(
-            replyCount: replyCount,
-            retweetCount: retweetCount,
-            likeCount: likeCount,
+            replyCount: tweet.replyCount,
+            retweetCount: tweet.retweetCount,
+            likeCount: tweet.likeCount,
             onReply: onReply,
             onLike: onLike,
             onRetweet: onRetweet,

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_clone/models/profile_model.dart';
+import 'package:twitter_clone/models/tweet_model.dart';
 import 'package:twitter_clone/views/pages/search_page.dart';
 import 'package:twitter_clone/views/resources/project_icons.dart';
 import 'package:twitter_clone/views/resources/project_logos.dart';
 import 'package:twitter_clone/views/widgets/appbar_widget.dart';
 import 'package:twitter_clone/views/widgets/bottom_navigation_bar_widget.dart';
 import 'package:twitter_clone/views/widgets/tweet/single_tweet_widget.dart';
+import 'package:twitter_clone/views/widgets/tweet/tweet_list_widget.dart';
 import 'package:twitter_clone/views/widgets/tweet_actions/tweet_actions_widget.dart';
 import '../routes.dart';
 import 'notifications_page.dart';
@@ -25,18 +28,6 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void _onRetweet() {
-    print("you want to retweet");
-  }
-
-  void _onReply() {
-    Navigator.of(context).pushNamed(Routes.reply);
-  }
-
-  void _onLike() {
-    print("you like it!");
-  }
-
   void _onTapCreateTweet() {
     Navigator.of(context).pushNamed(Routes.new_tweet);
   }
@@ -47,17 +38,33 @@ class _HomePageState extends State<HomePage> {
   @override
   void didChangeDependencies() {
     _pageSimulation = <Widget>{
-      SingleTweetWidget(
-        profileName: "Leandro",
-        profileNickname: "@leandro",
-        tweetedTimeAgo: "5m",
-        likeCount: 10,
-        tweetContent: 'Hey it''s my first tweet! Bla bla bla lkjldfkjlsdfk lksjlfjkdslkj lsdjflkdsfj',
-        onLike: _onLike,
-        onReply: _onReply,
-        replyCount: 14,
-        retweetCount: 12,
-        onRetweet: _onRetweet,
+      TweetListWidget(
+        tweets: [
+          TweetModel(
+            createdAt: DateTime.now().subtract(Duration(days: 2)),
+            content: "First tweet!",
+            replyCount: 10,
+            retweetCount: 4,
+            likeCount: 3,
+            profile: ProfileModel(
+              name: "Leandro",
+              nickname: "@leandro",
+              picture: "https://i.redd.it/4zr7r2y5zy431.png"
+            ),
+          ),
+          TweetModel(
+            createdAt: DateTime.now().subtract(Duration(days: 2)),
+            content: "Second tweet!",
+            replyCount: 9,
+            retweetCount: 6,
+            likeCount: 2,
+            profile: ProfileModel(
+              name: "Maria",
+              nickname: "@maria",
+              picture: "https://i.redd.it/4zr7r2y5zy431.png"
+            ),
+          ),
+        ],
       ),
       SearchPage(),
       NotificationsPage(),
