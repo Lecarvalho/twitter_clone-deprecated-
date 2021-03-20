@@ -17,9 +17,12 @@ class WriteTweetWidget extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        ProfilePictureWidget(
-          pictureType: PictureType.small,
-          pictureUrl: profilePictureUrl,
+        Padding(
+          padding: EdgeInsets.only(top: 3),
+          child: ProfilePictureWidget(
+            pictureType: PictureType.small,
+            pictureUrl: profilePictureUrl,
+          ),
         ),
         SizedBox(width: 10),
         Flexible(
