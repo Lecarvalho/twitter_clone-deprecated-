@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/views/resources/styles.dart';
-import 'package:twitter_clone/views/widgets/write_reply_widget.dart';
+import 'package:twitter_clone/views/widgets/write_tweet_widget.dart';
 
 class ReplyingWidget extends StatelessWidget {
   final TextEditingController textController;

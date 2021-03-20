@@ -32,7 +32,7 @@ class ProfilePictureWidget extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(color: ProjectColors.white, width: 3),
-        image: DecorationImage(image: NetworkImage(pictureUrl)),
+        image: DecorationImage(image: NetworkImage(pictureUrl), fit: BoxFit.cover),
       ),
     );
   }

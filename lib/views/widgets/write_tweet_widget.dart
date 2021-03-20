@@ -21,6 +21,7 @@ class WriteTweetWidget extends StatelessWidget {
           pictureType: PictureType.small,
           pictureUrl: profilePictureUrl,
         ),
+        SizedBox(width: 10),
         Flexible(
           child: TweetTextboxWidget(
             controller: textController,

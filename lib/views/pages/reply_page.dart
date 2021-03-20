@@ -25,7 +25,7 @@ class _ReplyPageState extends State<ReplyPage> {
         ),
       ),
       body: ReplyingWidget(
-        profilePictureUrl: 'https://images-na.ssl-images-amazon.com/images/I/41bC-%2BNFUEL._AC_.jpg',
+        profilePictureUrl: 'https://i.redd.it/4zr7r2y5zy431.png',
         replyingToProfileNickname: '@maxjacobson',
         textController: _textController,
       ),

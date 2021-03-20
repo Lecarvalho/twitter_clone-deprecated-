@@ -36,6 +36,10 @@ class _HomePageState extends State<HomePage> {
     print("you like it!");
   }
 
+  void _onTapCreateTweet(){
+    Navigator.of(context).pushNamed(Routes.new_tweet);
+  }
+
   Set<Widget>? _pageSimulation;
   bool _isReady = false;
 
@@ -78,9 +82,7 @@ class _HomePageState extends State<HomePage> {
         child: Container(),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("create new tweet action button is working!");
-        },
+        onPressed: _onTapCreateTweet,
         child: ProjectIcons.newTweet,
       ),
       body: _isReady
