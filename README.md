@@ -8,6 +8,7 @@
 - Provider - Dependency Injections
 - Firestore Database
 - Firebase Auth (Google / Email - password)
+- Firebase Storage
 
 ## Getting Started
 
