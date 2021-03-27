@@ -14,6 +14,8 @@ void main() {
         replyCount: 0,
         retweetCount: 0,
         profile: ProfileModel.empty(),
+        didILike: false,
+        didIRetweet: false,
       ).creationTimeAgo;
 
       expect(creationTimeAgo, "1d");
@@ -29,6 +31,8 @@ void main() {
         replyCount: 0,
         retweetCount: 0,
         profile: ProfileModel.empty(),
+        didILike: false,
+        didIRetweet: false,
       ).creationTimeAgo;
 
       expect(creationTimeAgo, "5d");
@@ -44,6 +48,8 @@ void main() {
         replyCount: 0,
         retweetCount: 0,
         profile: ProfileModel.empty(),
+        didILike: false,
+        didIRetweet: false,
       ).creationTimeAgo;
 
       expect(creationTimeAgo, "1h");
@@ -59,6 +65,8 @@ void main() {
         replyCount: 0,
         retweetCount: 0,
         profile: ProfileModel.empty(),
+        didILike: false,
+        didIRetweet: false,
       ).creationTimeAgo;
 
       expect(creationTimeAgo, "5h");
@@ -74,6 +82,8 @@ void main() {
         replyCount: 0,
         retweetCount: 0,
         profile: ProfileModel.empty(),
+        didILike: false,
+        didIRetweet: false,
       ).creationTimeAgo;
 
       expect(creationTimeAgo, "1m");
@@ -89,6 +99,8 @@ void main() {
         replyCount: 0,
         retweetCount: 0,
         profile: ProfileModel.empty(),
+        didILike: false,
+        didIRetweet: false,
       ).creationTimeAgo;
 
       expect(creationTimeAgo, "30s");
