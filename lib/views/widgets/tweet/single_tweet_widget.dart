@@ -41,7 +41,8 @@ class SingleTweetWidget extends StatelessWidget {
                         style: Styles.subtitle1,
                         children: [
                           TextSpan(
-                            text: " ${tweet.profile.nickname} · ${tweet.creationTimeAgo}",
+                            text:
+                                " ${tweet.profile.nickname} · ${tweet.creationTimeAgo}",
                             style: Styles.body2Gray,
                           ),
                         ],
@@ -49,19 +50,19 @@ class SingleTweetWidget extends StatelessWidget {
                     ),
                     SizedBox(height: 5),
                     Text(tweet.content),
+                    SizedBox(height: 10),
+                    TweetActionsWidget(
+                      replyCount: tweet.replyCount,
+                      retweetCount: tweet.retweetCount,
+                      likeCount: tweet.likeCount,
+                      onReply: onReply,
+                      onLike: onLike,
+                      onRetweet: onRetweet,
+                    ),
                   ],
                 ),
               )
             ],
-          ),
-          SizedBox(height: 10),
-          TweetActionsWidget(
-            replyCount: tweet.replyCount,
-            retweetCount: tweet.retweetCount,
-            likeCount: tweet.likeCount,
-            onReply: onReply,
-            onLike: onLike,
-            onRetweet: onRetweet,
           ),
         ],
       ),

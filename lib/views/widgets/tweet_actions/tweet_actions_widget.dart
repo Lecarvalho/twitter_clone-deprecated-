@@ -24,19 +24,18 @@ class TweetActionsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
       children: [
         ReplyActionWidget(
           replyCount: replyCount,
           onReply: onReply,
         ),
-        SizedBox(width: 30),
+        SizedBox(width: 40),
         RetweetActionWidget(
           retweetCount: retweetCount,
           onRetweet: onRetweet,
         ),
-        SizedBox(width: 30),
+        SizedBox(width: 40),
         LikeActionWidget(
           likeCount: likeCount,
           onLike: onLike,
