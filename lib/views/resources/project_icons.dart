@@ -94,6 +94,12 @@ class ProjectIcons {
         height: widthHeightSmallIcon,
       );
 
+  static Image get retweetAction => Image.asset(
+        "assets/icons/retweet.png",
+        width: widthHeightIcon,
+        height: widthHeightIcon,
+      );
+
   static Image get retweetSolid => Image.asset(
         "assets/icons/retweet-solid.png",
         width: widthHeightSmallIcon,
