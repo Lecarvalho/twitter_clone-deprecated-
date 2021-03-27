@@ -30,12 +30,12 @@ class TweetActionsWidget extends StatelessWidget {
           replyCount: replyCount,
           onReply: onReply,
         ),
-        SizedBox(width: 40),
+        SizedBox(width: 30),
         RetweetActionWidget(
           retweetCount: retweetCount,
           onRetweet: onRetweet,
         ),
-        SizedBox(width: 40),
+        SizedBox(width: 30),
         LikeActionWidget(
           likeCount: likeCount,
           onLike: onLike,
