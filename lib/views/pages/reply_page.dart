@@ -12,7 +12,8 @@ class _ReplyPageState extends State<ReplyPage> {
   final _textController = TextEditingController();
 
   void _onReply() {
-    print("replying action!");
+    //call the controller to create the reply
+    Navigator.of(context).pop();
   }
 
   @override

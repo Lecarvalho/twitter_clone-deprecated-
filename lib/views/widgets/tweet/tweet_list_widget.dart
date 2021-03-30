@@ -31,6 +31,7 @@ class _TweetListWidgetState extends State<TweetListWidget> {
             ActionBottomSheetWidget(
               icon: ProjectIcons.retweetAction,
               onTap: () {
+                //call the controller to retweet
                 setState(() {
                   tweet.didIRetweet = !tweet.didIRetweet;
                   tweet.retweetCount = tweet.didIRetweet
@@ -52,6 +53,7 @@ class _TweetListWidgetState extends State<TweetListWidget> {
   }
 
   void _onLike(TweetModel tweet) {
+    //call the controller to like or unlike
     setState(() {
       tweet.didILike = !tweet.didILike;
       tweet.likeCount =
