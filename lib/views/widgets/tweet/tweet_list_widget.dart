@@ -62,16 +62,23 @@ class _TweetListWidgetState extends State<TweetListWidget> {
     print("you like the tweet: ${tweet.id}");
   }
 
+  void _onTapTweetLine(){
+    Navigator.of(context).pushNamed(Routes.selected_tweet);
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
       itemBuilder: (context, index) {
         final tweet = widget.tweets[index];
-        return SingleTweetWidget(
-          tweet: tweet,
-          onReply: () => _onReply(tweet),
-          onLike: () => _onLike(tweet),
-          onRetweet: () => _onRetweet(tweet),
+        return GestureDetector(
+          onTap: _onTapTweetLine,
+          child: SingleTweetWidget(
+            tweet: tweet,
+            onReply: () => _onReply(tweet),
+            onLike: () => _onLike(tweet),
+            onRetweet: () => _onRetweet(tweet),
+          ),
         );
       },
       separatorBuilder: (context, index) {

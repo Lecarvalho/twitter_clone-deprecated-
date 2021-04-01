@@ -8,7 +8,7 @@ void main() {
       var aDayBefore = DateTime.now().subtract(Duration(days: 1));
 
       var creationTimeAgo = TweetModel(
-        id: 1,
+        id: "1",
         content: '',
         createdAt: aDayBefore,
         likeCount: 0,
@@ -26,7 +26,7 @@ void main() {
       var aDayBefore = DateTime.now().subtract(Duration(days: 5));
 
       var creationTimeAgo = TweetModel(
-        id: 1,
+        id: "1",
         content: '',
         createdAt: aDayBefore,
         likeCount: 0,
@@ -44,7 +44,7 @@ void main() {
       var aDayBefore = DateTime.now().subtract(Duration(hours: 1));
 
       var creationTimeAgo = TweetModel(
-        id: 1,
+        id: "1",
         content: '',
         createdAt: aDayBefore,
         likeCount: 0,
@@ -62,7 +62,7 @@ void main() {
       var aDayBefore = DateTime.now().subtract(Duration(hours: 5));
 
       var creationTimeAgo = TweetModel(
-        id: 1,
+        id: "1",
         content: '',
         createdAt: aDayBefore,
         likeCount: 0,
@@ -80,7 +80,7 @@ void main() {
       var aDayBefore = DateTime.now().subtract(Duration(minutes: 1));
 
       var creationTimeAgo = TweetModel(
-        id: 1,
+        id: "1",
         content: '',
         createdAt: aDayBefore,
         likeCount: 0,
@@ -98,7 +98,7 @@ void main() {
       var aDayBefore = DateTime.now().subtract(Duration(seconds: 30));
 
       var creationTimeAgo = TweetModel(
-        id: 1,
+        id: "1",
         content: '',
         createdAt: aDayBefore,
         likeCount: 0,

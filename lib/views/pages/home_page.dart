@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
       TweetListWidget(
         tweets: [
           TweetModel(
-            id: 1,
+            id: "1",
             createdAt: DateTime.now().subtract(Duration(days: 2)),
             content: "First tweet!",
             replyCount: 10,
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
             didIRetweet: false,
           ),
           TweetModel(
-            id: 2,
+            id: "2",
             createdAt: DateTime.now().subtract(Duration(days: 2)),
             content: "Second tweet!",
             replyCount: 9,
