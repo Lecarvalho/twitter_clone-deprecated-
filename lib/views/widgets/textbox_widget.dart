@@ -7,13 +7,15 @@ class TextboxWidget extends StatelessWidget {
   final String? label;
   final int? maxLength;
   final bool isMultiline;
+  final bool isPassword;
 
   TextboxWidget({
     required this.controller,
     required this.hintText,
     this.label,
     this.maxLength,
-    this.isMultiline = false
+    this.isMultiline = false,
+    this.isPassword = false,
   });
 
   @override
@@ -22,6 +24,7 @@ class TextboxWidget extends StatelessWidget {
       controller: controller,
       minLines: 1,
       maxLines: isMultiline ? 3 : 1,
+      obscureText: isPassword,
       inputFormatters: [
         LengthLimitingTextInputFormatter(maxLength)
       ],
