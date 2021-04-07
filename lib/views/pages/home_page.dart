@@ -48,7 +48,8 @@ class _HomePageState extends State<HomePage> {
             profile: ProfileModel(
               name: "Leandro",
               nickname: "@leandro",
-              picture: "https://i.redd.it/4zr7r2y5zy431.png"
+              picture: "https://i.redd.it/4zr7r2y5zy431.png",
+              bio: ""
             ),
             didILike: true,
             didIRetweet: false,
@@ -63,7 +64,8 @@ class _HomePageState extends State<HomePage> {
             profile: ProfileModel(
               name: "Maria",
               nickname: "@maria",
-              picture: "https://i.redd.it/4zr7r2y5zy431.png"
+              picture: "https://i.redd.it/4zr7r2y5zy431.png",
+              bio: ""
             ),
            didILike: false,
            didIRetweet: true, 

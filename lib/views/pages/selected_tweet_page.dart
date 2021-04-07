@@ -36,7 +36,9 @@ class _SelectedTweetPageState extends State<SelectedTweetPage> {
       profile: ProfileModel(
           name: "Leandro",
           nickname: "@leandro",
-          picture: "https://i.redd.it/4zr7r2y5zy431.png"),
+          picture: "https://i.redd.it/4zr7r2y5zy431.png",
+              bio: ""
+          ),
       didILike: true,
       didIRetweet: false,
     );
@@ -50,6 +52,8 @@ class _SelectedTweetPageState extends State<SelectedTweetPage> {
           name: 'Replier 1',
           nickname: '@replier1',
           picture: 'https://i.redd.it/4zr7r2y5zy431.png',
+              bio: ""
+
         ),
       ),
       ReplyModel(
@@ -60,6 +64,8 @@ class _SelectedTweetPageState extends State<SelectedTweetPage> {
            name: 'Replier 2',
           nickname: '@replier2',
           picture: 'https://i.redd.it/4zr7r2y5zy431.png',
+              bio: ""
+
         ),
       ),
       ReplyModel(
@@ -70,6 +76,8 @@ class _SelectedTweetPageState extends State<SelectedTweetPage> {
            name: 'Replier 3',
           nickname: '@replier3',
           picture: 'https://i.redd.it/4zr7r2y5zy431.png',
+              bio: ""
+
         ),
       ),
       ReplyModel(
@@ -80,6 +88,8 @@ class _SelectedTweetPageState extends State<SelectedTweetPage> {
            name: 'Replier 4',
           nickname: '@replier4',
           picture: 'https://i.redd.it/4zr7r2y5zy431.png',
+              bio: ""
+
         ),
       ),
       ReplyModel(
@@ -90,6 +100,8 @@ class _SelectedTweetPageState extends State<SelectedTweetPage> {
            name: 'Replier 5',
           nickname: '@replier5',
           picture: 'https://i.redd.it/4zr7r2y5zy431.png',
+              bio: ""
+
         ),
       ),
     ];
