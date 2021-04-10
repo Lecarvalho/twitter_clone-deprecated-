@@ -7,6 +7,8 @@ import 'views/resources/styles.dart';
 import 'views/routes.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
   await Firebase.initializeApp();
   runApp(MyApp());
 }

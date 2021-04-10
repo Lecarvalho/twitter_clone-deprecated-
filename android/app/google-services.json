@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:566284983122:android:e3cf0b480b201ab4bdb88b",
         "android_client_info": {
-          "package_name": "com.int.twitterclone"
+          "package_name": "com.twitterclone"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "566284983122-i1pd03u2abdk31a1j00gkg84n3mqa519.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.int.twitterclone",
+            "package_name": "com.twitterclone",
             "certificate_hash": "3ce828fd921a6dac6312484c762fb8203d4d7364"
           }
         },

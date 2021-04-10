@@ -1,1 +1,16 @@
-com.int.twitterclone
+com.twitterclone
+
+---
+
+Auth stuffs
+
+1. install firebase_auth
+    1. install firebase_core
+
+2. create the app on firebase
+3. setup the app on firebase
+4. create the certificate locally and join it in firebase
+5. download the google_services.json (for android only)
+6. change the build.gradle files to use the packages from firebase on the android layer
+7. rename the app (com.example to an unique app name - just replace everywhere)
+8. Finally work on the dart layer
