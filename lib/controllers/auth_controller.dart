@@ -5,15 +5,19 @@ import 'base_controller.dart';
 class AuthController extends BaseController<AuthServiceBase> {
   AuthController(AuthServiceBase service) : super(service: service);
     
-  void createUserWithEmailAndPassword(){
-    service.createWithEmailAndPassword();
+  void createUserWithEmailAndPassword(String email, String password, String displayName) async {
+    final authResponse = await service.createWithEmailAndPassword(email, password, displayName);
+    if (authResponse.succes){
+      //create the user on the database
+    }
+    //return a message for the user
   }
 
   void signInOrCreateWithGoogle(){
     service.signInOrCreateWithGoogle();
   }
 
-  void signInWithEmailAndPassword(){
-    service.signInWithEmailAndPassword();
+  void signInWithEmailAndPassword(String email, String password){
+    service.signInWithEmailAndPassword(email, password);
   }
 }
