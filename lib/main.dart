@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/views/resources/project_colors.dart';
 
@@ -5,8 +6,8 @@ import 'config/di.dart';
 import 'views/resources/styles.dart';
 import 'views/routes.dart';
 
-void main() {
-
+void main() async {
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 

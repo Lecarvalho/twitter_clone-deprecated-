@@ -1,4 +1,3 @@
-import 'package:twitter_clone/services/auth_service.dart';
 import 'package:twitter_clone/services/auth_service_base.dart';
 
 import 'base_controller.dart';
