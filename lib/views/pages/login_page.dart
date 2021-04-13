@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/config/app_params.dart';
+import 'package:twitter_clone/config/di.dart';
+import 'package:twitter_clone/controllers/auth_controller.dart';
 import 'package:twitter_clone/views/resources/project_logos.dart';
 import 'package:twitter_clone/views/resources/styles.dart';
 import 'package:twitter_clone/views/widgets/button_widget.dart';
 import 'package:twitter_clone/views/widgets/login_with_google_button_widget.dart';
 import 'package:twitter_clone/views/widgets/outlined_button_widget.dart';
 import 'package:twitter_clone/views/widgets/textbox_widget.dart';
+
+import '../routes.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -15,6 +19,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+  AuthController _authController = Di.authController;
 
   Widget _buildHeader() {
     return Column(
@@ -36,8 +41,15 @@ class _LoginPageState extends State<LoginPage> {
 
   }
 
-  void _onTapLoginWithGoogle() {
-    
+  void _onTapLoginWithGoogle() async {
+    var userExists = await _authController.signInOrCreateWithGoogle();
+
+    if (userExists){
+      Navigator.of(context).pushReplacementNamed(Routes.home);
+    }
+    else {
+      Navigator.of(context).pushReplacementNamed(Routes.edit_profile);
+    }
   }
 
   Widget _buildCreateUserOrLoginButtons() {

@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/views/resources/project_colors.dart';
@@ -8,8 +9,11 @@ import 'views/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   await Firebase.initializeApp();
+
+  Di.createDi();
+  
   runApp(MyApp());
 }
 
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
         typography: Typography.material2018(),
       ),
       routes: Routes.routes,
-      initialRoute: Routes.login,
+      initialRoute: Routes.preload,
     );
   }
 }

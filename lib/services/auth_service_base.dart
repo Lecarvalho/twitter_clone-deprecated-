@@ -15,7 +15,7 @@ abstract class AuthServiceBase extends ServiceBase<AuthProvider> {
 
 class AuthResponse {
   UserModel? user;
-  bool get succes => user != null;
+  bool get success => user != null;
   String? message;
   AuthResponse({this.user, this.message});
 }
